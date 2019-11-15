@@ -1,0 +1,9 @@
+.title_wrapper {
+    grid-area: title;
+    background: #2196f4;
+}
+
+.title {
+    color: #fff;
+    margin-left: 50px;
+}

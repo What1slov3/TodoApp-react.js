@@ -1,0 +1,8 @@
+.task_counter {
+    grid-area: counter;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: #2196f4;
+    color: #fff;
+}

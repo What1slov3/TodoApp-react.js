@@ -1,0 +1,24 @@
+.task_wrapper {
+    border-bottom: 1px solid #7e7e7e;
+    padding: 20px 300px 20px 40px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.close_btn {
+    font-size: 14px;
+    font-weight: 700;
+    padding-top: 5px;
+    cursor: pointer;
+    transition: .2s ease-in;
+    margin-left: 50px;
+}
+
+.task_content {
+    max-width: 500px;
+}
+
+.close_btn:hover {
+    color: red;
+}

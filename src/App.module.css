@@ -1,0 +1,12 @@
+.app_wrapper {
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 2fr 8fr;
+    grid-template-rows: 80px 1fr;
+    grid-template-areas: "title title"
+                         "todo-list todo";
+}
+
+body {
+    overflow: hidden;
+}
