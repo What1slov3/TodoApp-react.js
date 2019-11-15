@@ -1,4 +1,5 @@
 import React, { Fragment } from 'react';
+import ReactDOM from 'react-dom';
 import s from './addTaskBtn.module.css';
 import { connect } from 'react-redux';
 import {addTask} from '../../actions/taskCreator';
@@ -22,7 +23,7 @@ class AddTaskBtn extends React.Component {
     handleCreateTaskBtn = (event) => {
         this.setState({
             active: !this.state.active,
-        })
+        });
     }
 
     handleChange = () => {
@@ -52,7 +53,7 @@ class AddTaskBtn extends React.Component {
             <Fragment>
                 <div className={s.addTaskBtn} onClick={this.handleCreateTaskBtn} onMouseDown={this.noSelect}>
                     <div className={s.add_btn}>
-                        {!active ? '+' : '-'}
+                        {!active ? '+' : 'back'}
                     </div>
                 </div>
                 {active && <input
@@ -63,6 +64,7 @@ class AddTaskBtn extends React.Component {
                     value={inputValue}
                     onKeyPress={this.handleKeyPress}
                     onChange={this.handleChange}
+                    autoFocus
                 />}
             </Fragment>
         );

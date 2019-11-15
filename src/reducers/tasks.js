@@ -1,26 +1,6 @@
-import {ADD_TASK} from '../constants';
+import { ADD_TASK, REMOVE_TASK, COMPLETE_TASK } from '../constants';
 
-const TASKS = [
-    {
-        id: (new Date()).getTime(),
-        task: 'Dawdd'
-    },
-    {
-        id: (new Date()).getTime(),
-        task: `Lorem`
-    },
-    {
-        id: (new Date()).getTime(),
-        task: 'Dawd123d'
-    },
-    {
-        id: (new Date()).getTime(),
-        isCompleted: false,
-        task: 'Dawdawgagwd'
-    }
-];
-
-const tasks = (state = TASKS, { id, isCompleted, task, type }) => {
+const tasks = (state = [], { id, isCompleted, task, type }) => {
     switch (type) {
         case ADD_TASK:
             return [
@@ -30,6 +10,17 @@ const tasks = (state = TASKS, { id, isCompleted, task, type }) => {
                     isCompleted: isCompleted
                 }
             ];
+
+        case REMOVE_TASK:
+            return [...state].filter(text => text.id !== id)
+
+        case COMPLETE_TASK:
+            return [...state].map(task => {
+                if (task.id === id) {
+                    task.isCompleted = !task.isCompleted
+                }
+                return task
+            })
 
         default:
             return state;

@@ -19,6 +19,29 @@
     max-width: 500px;
 }
 
+.close_btn::before {
+    content: '\2718';
+}
+
 .close_btn:hover {
     color: red;
+}
+
+.task_fix {
+    display: flex;
+    align-items: center;
+}
+
+.task_complete {
+    width: 15px;
+    height: 15px;
+    border-radius: 20px;
+    border: 0px;
+    margin-right: 20px;
+    cursor: pointer;
+}
+
+.task_isCompleted {
+    opacity: .5;
+    font-size: 14px;
 }
