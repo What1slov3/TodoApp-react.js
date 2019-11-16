@@ -1,6 +1,8 @@
 .title_wrapper {
     grid-area: title;
     background: #2196f4;
+    display: flex;
+    align-items: center;
 }
 
 .title {

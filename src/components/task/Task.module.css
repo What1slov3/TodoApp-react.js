@@ -1,5 +1,5 @@
 .task_wrapper {
-    border-bottom: 1px solid #7e7e7e;
+    border-bottom: 1px solid #dbdbdb;
     padding: 20px 300px 20px 40px;
     display: flex;
     justify-content: space-between;
@@ -19,8 +19,8 @@
     max-width: 500px;
 }
 
-.close_btn::before {
-    content: '\2718';
+.close_btn {
+    font-size: 16px;
 }
 
 .close_btn:hover {
@@ -30,6 +30,7 @@
 .task_fix {
     display: flex;
     align-items: center;
+    font-size: 18px;
 }
 
 .task_complete {
@@ -42,6 +43,9 @@
 }
 
 .task_isCompleted {
-    opacity: .5;
-    font-size: 14px;
+    color: #01aa4ddc;
+}
+
+.task_isCompleted .task_content {
+    text-decoration: line-through;
 }

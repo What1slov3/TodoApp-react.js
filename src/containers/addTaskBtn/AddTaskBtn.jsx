@@ -1,8 +1,7 @@
 import React, { Fragment } from 'react';
-import ReactDOM from 'react-dom';
 import s from './addTaskBtn.module.css';
 import { connect } from 'react-redux';
-import {addTask} from '../../actions/taskCreator';
+import { addTask } from '../../actions/taskCreator';
 
 class AddTaskBtn extends React.Component {
 
@@ -32,10 +31,10 @@ class AddTaskBtn extends React.Component {
         })
     }
 
-    handleKeyPress = ({key}) => {
+    handleKeyPress = ({ key }) => {
         if (key === 'Enter' && this.state.inputValue.length > 3) {
 
-            this.props.addTask((new Date()).getTime() ,this.state.inputValue, false);
+            this.props.addTask((new Date()).getTime(), this.state.inputValue, false);
 
             this.setState({
                 active: false,
@@ -52,9 +51,7 @@ class AddTaskBtn extends React.Component {
         return (
             <Fragment>
                 <div className={s.addTaskBtn} onClick={this.handleCreateTaskBtn} onMouseDown={this.noSelect}>
-                    <div className={s.add_btn}>
-                        {!active ? '+' : 'back'}
-                    </div>
+                    {!active ? <i className={`${s.add_btn} fas fa-plus`}></i> : <i className={`${s.add_btn} fas fa-undo-alt`}></i>}
                 </div>
                 {active && <input
                     ref={this.inputRef}
@@ -73,4 +70,4 @@ class AddTaskBtn extends React.Component {
 
 export default connect(state => ({
     tasks: state.tasks
-}), {addTask})(AddTaskBtn);
+}), { addTask })(AddTaskBtn);

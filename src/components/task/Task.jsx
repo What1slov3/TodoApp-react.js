@@ -1,7 +1,6 @@
 import React from 'react';
 import s from './Task.module.css';
 import PropTypes from 'prop-types';
-import { completeTask } from '../../actions/taskCreator';
 
 class Task extends React.Component {
 
@@ -13,11 +12,16 @@ class Task extends React.Component {
             <div className={s.task_wrapper}>
                 <div className={isCompleted && s.task_isCompleted}>
                     <div className={s.task_fix}>
-                        <input type="checkbox" className={s.task_complete} onClick={() => completeTask(id)}/>
+                        {
+                            isCompleted ? 
+                            <i className={`${s.task_complete} far fa-check-square`} onClick={() => completeTask(id)}></i> 
+                            :
+                            <i className={`${s.task_complete} far fa-square`} onClick={() => completeTask(id)}></i>
+                        }
                         <div className={s.task_content}>{task}</div>
                     </div>
                 </div>
-                <div className={s.close_btn} onClick={() => removeTask(id)}></div>
+                <i className={`${s.close_btn} far fa-trash-alt`} onClick={() => removeTask(id)}></i>
             </div>
         );
     }

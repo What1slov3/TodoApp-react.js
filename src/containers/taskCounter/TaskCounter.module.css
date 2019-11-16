@@ -6,3 +6,23 @@
     background: #2196f4;
     color: #fff;
 }
+
+
+.filters {
+    color: black;
+    display: flex;
+    margin-left: 15px;
+    padding-left: 5px;
+}
+
+.filters div {
+    margin-right: 5px;
+    color: #ffffff;
+    cursor: pointer;
+    transition: .2s;
+}
+
+.filters div:hover {
+    color: #26d374;
+}
+
