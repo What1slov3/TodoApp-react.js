@@ -81,15 +81,15 @@ class TaskCounter extends React.Component {
     render() {
 
         const { tasks } = this.props;
-        const { counter_data } = this.state;
+        const { filterType } = this.state;
 
         return (
             <div className={s.task_counter}>
                 <div className={s.counter}>{this.showFilter(tasks)} tasks left</div>
                 <div className={s.filters} onClick={this.chooseFilter}>
-                    <div data-filter="all" className={s.all}>All</div>
-                    <div data-filter="active" className={s.active}>Active</div>
-                    <div data-filter="completed" className={s.completed}>Completed</div>
+                    <div data-filter="all" className={`${filterType === 'all' && s.activeTask}`}>All</div>
+                    <div data-filter="active" className={`${filterType === 'active' && s.activeTask}`}>Active</div>
+                    <div data-filter="completed" className={`${filterType === 'completed' && s.activeTask}`}>Completed</div>
                 </div>
             </div>
         );

@@ -1,7 +1,8 @@
 .todoList_wrapper {
     grid-area: todo-list;
     display: grid;
-    grid-template-rows: 1fr 30px;
+    grid-template-rows: 1fr 35px;
     grid-template-areas: 'main'
                          'counter';
+    border-right: 2px solid #dbdbdb;
 }

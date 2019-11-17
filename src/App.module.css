@@ -1,7 +1,7 @@
 .app_wrapper {
     height: 100vh;
     display: grid;
-    grid-template-columns: 2fr 8fr;
+    grid-template-columns: 300px 1fr;
     grid-template-rows: 50px 1fr;
     grid-template-areas: "title title"
                          "todo-list todo";

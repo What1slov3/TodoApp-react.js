@@ -1,4 +1,4 @@
-import { ADD_TASK, REMOVE_TASK, COMPLETE_TASK } from '../constants';
+import { ADD_TASK, REMOVE_TASK, COMPLETE_TASK, FAVORITE_TASK } from '../constants';
 import { load } from 'redux-localstorage-simple';
 
 let TASKS = load({ namespace: 'todo' });
@@ -27,6 +27,14 @@ const tasks = (state = TASKS.tasks, { id, isCompleted, task, type }) => {
             return [...state].map(task => {
                 if (task.id === id) {
                     task.isCompleted = !task.isCompleted
+                }
+                return task
+            })
+
+        case FAVORITE_TASK:
+            return [...state].map(task => {
+                if (task.id === id) {
+                    task.isFavorite = !task.isFavorite
                 }
                 return task
             })

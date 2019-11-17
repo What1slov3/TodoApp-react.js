@@ -1,30 +1,23 @@
 .task_wrapper {
     border-bottom: 1px solid #dbdbdb;
-    padding: 20px 300px 20px 40px;
+    padding: 20px 30% 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
 .close_btn {
-    font-size: 14px;
-    font-weight: 700;
-    padding-top: 5px;
-    cursor: pointer;
+    font-weight: 400;
     transition: .2s ease-in;
-    margin-left: 50px;
-}
-
-.task_content {
-    max-width: 500px;
-}
-
-.close_btn {
-    font-size: 16px;
 }
 
 .close_btn:hover {
     color: red;
+}
+
+.task_content {
+    max-width: 500px;
+    margin-right: 50px;
 }
 
 .task_fix {
@@ -34,18 +27,36 @@
 }
 
 .task_complete {
-    width: 15px;
-    height: 15px;
-    border-radius: 20px;
-    border: 0px;
     margin-right: 20px;
     cursor: pointer;
+    color: #2196f4;
 }
 
-.task_isCompleted {
-    color: #01aa4ddc;
+.task_isCompleted, .task_isCompleted i {
+    opacity: .6;
 }
 
 .task_isCompleted .task_content {
     text-decoration: line-through;
+}
+
+.task_editor {
+    width: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between; 
+}
+
+.task_editor i {
+    cursor: pointer;
+    transition: .2s;
+    font-size: 18px;
+}
+
+.favorite_btn:hover {
+    color: #ffdf2c;
+}
+
+.isFavorite {
+    color: #ffdf2c;
 }

@@ -3,12 +3,13 @@
   "name": "ToDo App on React.js",
   "icons": [
     {
-      "src": "logo.svg",
-      "type": "image/svg+xml"
+      "src": "favicon.png",
+      "sizes": "64x64",
+      "type": "image/x-icon"
     }
   ],
   "start_url": ".",
   "display": "standalone",
-  "theme_color": "#000000",
+  "theme_color": "#ffffff",
   "background_color": "#ffffff"
 }
