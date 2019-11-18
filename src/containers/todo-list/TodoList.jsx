@@ -1,19 +1,15 @@
 import React from 'react';
 import s from './TodoList.module.css';
 import TaskCounter from '../taskCounter/TaskCounter';
-import Todo_tasks from '../../components/todo_tasks/Todo_tasks';
+import Todo_list_item from '../../components/todo_list_item/Todo_list_item';
 
 class TodoList extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {};
-    }
-
     render() {
-        return(
+        return (
             <div className={s.todoList_wrapper}>
                 <div className={s.container}>
-                    <Todo_tasks title="Tasks"/>
+                    <Todo_list_item title="Tasks" href={'/'} icon={[<i class="fad fa-tasks"></i>]} />
+                    <Todo_list_item title="Important" href={'/favorites'} icon={[<i class="fas fa-star"></i>]} />
                 </div>
                 <TaskCounter />
             </div>

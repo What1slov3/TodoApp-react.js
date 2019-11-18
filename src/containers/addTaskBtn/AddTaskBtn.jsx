@@ -1,5 +1,5 @@
 import React, { Fragment } from 'react';
-import s from './addTaskBtn.module.css';
+import s from './AddTaskBtn.module.css';
 import { connect } from 'react-redux';
 import { addTask } from '../../actions/taskCreator';
 
@@ -13,7 +13,6 @@ class AddTaskBtn extends React.Component {
         }
         this.inputRef = React.createRef();
     }
-
 
     noSelect = (e) => {
         e.preventDefault()
@@ -68,6 +67,10 @@ class AddTaskBtn extends React.Component {
     }
 }
 
-export default connect(state => ({
-    tasks: state.tasks
-}), { addTask })(AddTaskBtn);
+const mapStateToProps = (state) => (
+    {
+        tasks: state.tasks
+    }
+)
+
+export default connect(mapStateToProps, {addTask})(AddTaskBtn)

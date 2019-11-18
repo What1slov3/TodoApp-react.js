@@ -1,0 +1,25 @@
+.todo_link:hover {
+    background: #eeeeee;
+}
+
+.todo_link {
+    text-decoration: none;
+    color: #949494;
+    padding: 20px 40px;
+    cursor: pointer;
+    font-size: 20px;
+    font-weight: 400;
+    display: block;
+}
+
+.active_link {
+    border-left: 5px solid #ffc23e;
+}
+
+.todo_link span {
+    margin-left: 15px;
+}
+
+.active_link i {
+    color: #ffc23e;
+}

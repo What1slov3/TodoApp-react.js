@@ -1,24 +1,29 @@
 .task_counter {
     grid-area: counter;
-    padding: 0px 20px;
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
+    justify-content: space-around;
     align-items: center;
     background: #2196f4;
     color: #fff;
+    font-family: Calibri, sans-serif;
 }
 
 .counter {
-    color: #dbdbdb;
+    color: #3eff95;
     font-weight: 700;
+    padding: 4px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
 }
-
 
 .filters {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    width: 170px;
+    width: 200px;
+    height: 100%;
 }
 
 .filters div {

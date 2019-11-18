@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 class Task extends React.Component {
 
     playAudio = () => {
-        let audio = new Audio('https://notificationsounds.com/soundfiles/8eefcfdf5990e441f0fb6f3fad709e21/file-sounds-1100-open-ended.mp3');
+        let audio = new Audio('https://notificationsounds.com/soundfiles/15de21c670ae7c3f6f3f1f37029303c9/file-sounds-1085-definite.mp3');
         audio.play();
     }
 
@@ -23,14 +23,14 @@ class Task extends React.Component {
                     <div className={s.task_fix}>
                         {
                             isCompleted ?
-                                <i 
-                                    className={`${s.task_complete} far fa-check-square`} 
+                                <i
+                                    className={`${s.task_complete} fal fa-check-circle`}
                                     onClick={() => completeTask(id)}>
                                 </i>
                                 :
-                                <i 
-                                    className={`${s.task_complete} far fa-square`} 
-                                    onClick={() => completeTask(id)} 
+                                <i
+                                    className={`${s.task_complete} fal fa-circle`}
+                                    onClick={() => completeTask(id)}
                                     onMouseUp={this.playAudio}>
                                 </i>
                         }
@@ -55,15 +55,16 @@ Task.propTypes = {
     id: PropTypes.number,
     isCompleted: PropTypes.bool,
     task: PropTypes.string,
-    removeTask: PropTypes.func
-
+    removeTask: PropTypes.func,
+    isFavorite: PropTypes.bool
 }
 
 Task.defaultProps = {
     id: (new Date()).getTime(),
     isCompleted: false,
     task: 'Task must be here',
-    removeTask: () => { }
+    removeTask: () => {},
+    isFavorite: false
 }
 
 export default Task;

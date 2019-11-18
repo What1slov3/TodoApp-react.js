@@ -52,7 +52,7 @@ class TaskCounter extends React.Component {
 
         switch (this.state.filterType) {
             case 'all':
-                return count.length;
+                return count.length == 1 ? `${count.length} task in all` : `${count.length} tasks in all`;
             case 'active':
                 let count_active = count.reduce((result, item) => {
                     if (item === false) {
@@ -62,7 +62,7 @@ class TaskCounter extends React.Component {
                     return result;
                 }, [])
 
-                return count_active.length;
+                return count_active.length == 1 ? `${count_active.length} task is active` : `${count_active.length} tasks is active`;
             case 'completed':
                 let count_completed = count.reduce((result, item) => {
                     if (item === true) {
@@ -72,7 +72,7 @@ class TaskCounter extends React.Component {
                     return result;
                 }, [])
 
-                return count_completed.length;
+                return count_completed.length == 1 ? `${count_completed.length} task is completed` : `${count_completed.length} tasks is completed`;
             default:
                 return false;
         }
@@ -85,7 +85,7 @@ class TaskCounter extends React.Component {
 
         return (
             <div className={s.task_counter}>
-                <div className={s.counter}>{this.showFilter(tasks)} tasks left</div>
+                <div className={s.counter}>{this.showFilter(tasks)}</div>
                 <div className={s.filters} onClick={this.chooseFilter}>
                     <div data-filter="all" className={`${filterType === 'all' && s.activeTask}`}>All</div>
                     <div data-filter="active" className={`${filterType === 'active' && s.activeTask}`}>Active</div>
@@ -96,6 +96,10 @@ class TaskCounter extends React.Component {
     }
 }
 
-export default connect(state => ({
-    tasks: state.tasks
-}))(TaskCounter);;
+const mapStateToProps = (state) => (
+    {
+        tasks: state.tasks
+    }
+)
+
+export default connect(mapStateToProps, {})(TaskCounter)

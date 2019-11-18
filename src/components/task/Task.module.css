@@ -1,6 +1,6 @@
 .task_wrapper {
     border-bottom: 1px solid #dbdbdb;
-    padding: 20px 30% 20px 40px;
+    padding: 20px 100px 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -16,7 +16,6 @@
 }
 
 .task_content {
-    max-width: 500px;
     margin-right: 50px;
 }
 
@@ -27,9 +26,9 @@
 }
 
 .task_complete {
-    margin-right: 20px;
+    margin-right: 30px;
     cursor: pointer;
-    color: #2196f4;
+    color: #ffc23e;
 }
 
 .task_isCompleted, .task_isCompleted i {
@@ -41,7 +40,7 @@
 }
 
 .task_editor {
-    width: 50px;
+    min-width: 50px;
     display: flex;
     align-items: center;
     justify-content: space-between; 

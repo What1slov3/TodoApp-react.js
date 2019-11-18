@@ -1,7 +1,13 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 .app_wrapper {
     height: 100vh;
     display: grid;
-    grid-template-columns: 300px 1fr;
+    grid-template-columns: 250px 1fr;
     grid-template-rows: 50px 1fr;
     grid-template-areas: "title title"
                          "todo-list todo";
