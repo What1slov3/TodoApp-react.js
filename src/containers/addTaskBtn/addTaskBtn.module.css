@@ -1,7 +1,7 @@
 .addTaskBtn {
     padding: 20px;
     border-radius: 50px;
-    background: #3eff95;
+    background: #2f9774;
     z-index: 1000;
     position: fixed;
     bottom: 50px;
@@ -16,7 +16,7 @@
 }
 
 .addTaskBtn:hover {
-    background: #26d374;
+    background: #23c28d;
 }
 
 .add_btn {

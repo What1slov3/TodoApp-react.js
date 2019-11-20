@@ -11,14 +11,14 @@ export const addTask = (id, task, isCompleted, isFavorite) => ({
 export const removeTask = id => ({
     type: REMOVE_TASK,
     id
-})
+});
 
 export const completeTask = id => ({
     type: COMPLETE_TASK,
     id
-})
+});
 
 export const favoriteTask = id => ({
     type: FAVORITE_TASK,
     id
-})
+});

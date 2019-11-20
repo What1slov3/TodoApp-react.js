@@ -8,14 +8,16 @@ import ImportantTasks from './containers/importantTasks/ImportantTasks';
 
 function App() {
   return (
-      <div className="app_wrapper">
-        <Title title="WhaToDo" />
-          <Switch>
-            <Route exact path='/' component={Todo}></Route>
-            <Route path='/favorites' component={ImportantTasks}></Route>
-          </Switch>
-        <TodoList />
+    <div className="app_wrapper">
+      <Title title="WhaToDo" />
+      <div className="app_wrapper__content">
+        <Switch>
+          <Route exact path='/' component={Todo}></Route>
+          <Route path='/favorites' component={ImportantTasks}></Route>
+        </Switch>
       </div>
+      <TodoList />
+    </div>
   );
 }
 

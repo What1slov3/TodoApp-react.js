@@ -1,11 +1,12 @@
 .title_wrapper {
     grid-area: title;
-    background: #2196f4;
+    background: #50355e;
     display: flex;
     align-items: center;
+    padding-left: 30px;
 }
 
 .title {
     color: #fff;
-    margin-left: 50px;
+    font-size: 20px;
 }

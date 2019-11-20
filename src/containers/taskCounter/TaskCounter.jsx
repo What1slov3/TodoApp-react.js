@@ -1,6 +1,7 @@
 import React from 'react';
 import s from './TaskCounter.module.css';
 import { connect } from 'react-redux';
+import { noSelect } from '../../functions';
 
 class TaskCounter extends React.Component {
 
@@ -24,6 +25,7 @@ class TaskCounter extends React.Component {
     }
 
     chooseFilter = (e) => {
+
         switch (e.target.dataset.filter) {
             case 'all':
                 this.setState({
@@ -86,7 +88,7 @@ class TaskCounter extends React.Component {
         return (
             <div className={s.task_counter}>
                 <div className={s.counter}>{this.showFilter(tasks)}</div>
-                <div className={s.filters} onClick={this.chooseFilter}>
+                <div className={s.filters} onClick={this.chooseFilter} onMouseDown={noSelect}>
                     <div data-filter="all" className={`${filterType === 'all' && s.activeTask}`}>All</div>
                     <div data-filter="active" className={`${filterType === 'active' && s.activeTask}`}>Active</div>
                     <div data-filter="completed" className={`${filterType === 'completed' && s.activeTask}`}>Completed</div>

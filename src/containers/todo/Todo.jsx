@@ -1,5 +1,4 @@
 import React from 'react';
-import s from './Todo.module.css';
 import Task from '../../components/task/Task';
 import { connect } from 'react-redux';
 import AddTaskBtn from '../addTaskBtn/AddTaskBtn';
@@ -11,7 +10,7 @@ class Todo extends React.Component {
         const { tasks, removeTask, completeTask, favoriteTask } = this.props;
 
         return (
-            <div className={s.todo_wrapper}>
+            <div>
                 <AddTaskBtn />
 
                 {

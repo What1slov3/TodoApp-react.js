@@ -2,6 +2,7 @@ import React, { Fragment } from 'react';
 import s from './AddTaskBtn.module.css';
 import { connect } from 'react-redux';
 import { addTask } from '../../actions/taskCreator';
+import { noSelect } from '../../functions';
 
 class AddTaskBtn extends React.Component {
 
@@ -12,10 +13,6 @@ class AddTaskBtn extends React.Component {
             inputValue: '',
         }
         this.inputRef = React.createRef();
-    }
-
-    noSelect = (e) => {
-        e.preventDefault()
     }
 
     handleCreateTaskBtn = (event) => {
@@ -49,7 +46,7 @@ class AddTaskBtn extends React.Component {
 
         return (
             <Fragment>
-                <div className={s.addTaskBtn} onClick={this.handleCreateTaskBtn} onMouseDown={this.noSelect}>
+                <div className={s.addTaskBtn} onClick={this.handleCreateTaskBtn} onMouseDown={noSelect}>
                     {!active ? <i className={`${s.add_btn} fas fa-plus`}></i> : <i className={`${s.add_btn} fas fa-undo-alt`}></i>}
                 </div>
                 {active && <input
@@ -73,4 +70,4 @@ const mapStateToProps = (state) => (
     }
 )
 
-export default connect(mapStateToProps, {addTask})(AddTaskBtn)
+export default connect(mapStateToProps, { addTask })(AddTaskBtn)

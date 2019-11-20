@@ -1,9 +1,12 @@
 .task_wrapper {
     border-bottom: 1px solid #dbdbdb;
+    border-top: 1px solid #dbdbdb;
     padding: 20px 100px 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin: 15px 30px 15px 45px;
+    border-radius: 10px;
 }
 
 .close_btn {
@@ -17,6 +20,8 @@
 
 .task_content {
     margin-right: 50px;
+    min-width: 300px;
+    font-size: 14px;
 }
 
 .task_fix {
@@ -28,15 +33,17 @@
 .task_complete {
     margin-right: 30px;
     cursor: pointer;
-    color: #ffc23e;
+    color: #c45d37;
 }
 
-.task_isCompleted, .task_isCompleted i {
+.task_isCompleted i {
     opacity: .6;
+    color: #212121;
 }
 
 .task_isCompleted .task_content {
     text-decoration: line-through;
+    color: #bdbdbd;
 }
 
 .task_editor {

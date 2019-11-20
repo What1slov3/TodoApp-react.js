@@ -1,5 +1,4 @@
 import React from 'react';
-import s from './ImportantTasks.module.css';
 import Task from '../../components/task/Task';
 import { connect } from 'react-redux';
 import { removeTask, completeTask, favoriteTask } from '../../actions/taskCreator';
@@ -16,7 +15,7 @@ class ImportantTasks extends React.Component {
         const { tasks, removeTask, completeTask, favoriteTask } = this.props;
 
         return (
-            <div className={s.importantTasks_wrapper}>
+            <div>
                 {
                     tasks.map(({ id, isCompleted, task, isFavorite }) => {
                         if (isFavorite === true && isCompleted === false) {

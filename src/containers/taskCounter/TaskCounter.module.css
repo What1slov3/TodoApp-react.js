@@ -4,23 +4,24 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    background: #2196f4;
+    background: #50355e;
     color: #fff;
     font-family: Calibri, sans-serif;
 }
 
 .counter {
-    color: #3eff95;
+    color: #fff;
     font-weight: 700;
     padding: 4px;
     display: flex;
     justify-content: center;
     width: 100%;
+    text-transform: uppercase;
 }
 
 .filters {
     display: flex;
-    justify-content: space-between;
+    justify-content: space-around;
     align-items: center;
     width: 200px;
     height: 100%;
@@ -30,14 +31,14 @@
     cursor: pointer;
     transition: .2s;
     padding: 1px 6px;
+    border: 2px solid rgba(255, 0, 0, 0);
 }
 
 .filters div:hover {
-    color: #3eff95;
+    color: #23c28d;
 }
 
 .activeTask {
-    border: 2px solid #3eff95;
-    border-radius: 5px;
-    color: #3eff95;
+    border: 2px solid #23c28d !important;
+    color: #23c28d;
 }
