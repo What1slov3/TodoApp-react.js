@@ -9,14 +9,16 @@ if (!TASKS || !TASKS.tasks || !TASKS.tasks.length) {
     }
 }
 
-const tasks = (state = TASKS.tasks, { id, isCompleted, task, type }) => {
+const tasks = (state = TASKS.tasks, { id, isCompleted, task, type, isFavorite, data }) => {
     switch (type) {
         case ADD_TASK:
             return [
                 ...state, {
                     id: id,
                     task: task,
-                    isCompleted: isCompleted
+                    isCompleted: isCompleted,
+                    isFavorite: isFavorite,
+                    data: data
                 }
             ];
 

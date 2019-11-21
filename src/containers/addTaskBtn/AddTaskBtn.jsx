@@ -2,7 +2,7 @@ import React, { Fragment } from 'react';
 import s from './AddTaskBtn.module.css';
 import { connect } from 'react-redux';
 import { addTask } from '../../actions/taskCreator';
-import { noSelect } from '../../functions';
+import { noSelect, getDate } from '../../functions';
 
 class AddTaskBtn extends React.Component {
 
@@ -28,9 +28,12 @@ class AddTaskBtn extends React.Component {
     }
 
     handleKeyPress = ({ key }) => {
-        if (key === 'Enter' && this.state.inputValue.length > 3) {
 
-            this.props.addTask((new Date()).getTime(), this.state.inputValue, false);
+        const { inputValue } = this.state;
+
+        if (key === 'Enter' && inputValue.length > 3) {
+
+            this.props.addTask((new Date()).getTime(), inputValue, false, false, getDate());
 
             this.setState({
                 active: false,

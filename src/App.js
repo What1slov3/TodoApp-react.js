@@ -5,6 +5,7 @@ import Title from './components/Title/Title';
 import TodoList from './containers/todo-list/TodoList';
 import { BrowserRouter, Switch, Route } from 'react-router-dom';
 import ImportantTasks from './containers/importantTasks/ImportantTasks';
+import today_tasks from './containers/today_tasks/today_tasks';
 
 function App() {
   return (
@@ -14,6 +15,7 @@ function App() {
         <Switch>
           <Route exact path='/' component={Todo}></Route>
           <Route path='/favorites' component={ImportantTasks}></Route>
+          <Route path='/today' component={today_tasks}></Route>
         </Switch>
       </div>
       <TodoList />

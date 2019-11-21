@@ -1,11 +1,12 @@
 import { ADD_TASK, REMOVE_TASK, COMPLETE_TASK, FAVORITE_TASK } from '../constants';
 
-export const addTask = (id, task, isCompleted, isFavorite) => ({
+export const addTask = (id, task, isCompleted, isFavorite, data) => ({
     type: ADD_TASK,
     id,
     task,
     isCompleted,
-    isFavorite
+    isFavorite,
+    data
 });
 
 export const removeTask = id => ({

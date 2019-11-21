@@ -9,6 +9,7 @@ class TodoList extends React.Component {
             <div className={s.todoList_wrapper}>
                 <div className={s.container}>
                     <Todo_list_item title="Tasks" href={'/'} icon={[<i class="fad fa-tasks"></i>]} />
+                    <Todo_list_item title="Today" href={'/today'} icon={[<i class="far fa-clock"></i>]}/>
                     <Todo_list_item title="Important" href={'/favorites'} icon={[<i class="fas fa-star"></i>]} />
                 </div>
                 <TaskCounter />
